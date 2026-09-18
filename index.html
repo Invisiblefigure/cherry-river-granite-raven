@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Учебный файл HTML</title>
+    <title>Мультимедиа — Практическая работа</title>
     <style>
         * {
             margin: 0;
@@ -13,156 +13,192 @@
 
         body {
             font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #e8f4fc 0%, #f0f7ff 50%, #e6f0fa 100%);
+            background: linear-gradient(160deg, #e3f2fd 0%, #f5f9ff 40%, #e8f5e9 100%);
             color: #222;
-            line-height: 1.6;
+            line-height: 1.65;
             min-height: 100vh;
-            padding: 20px;
+            padding: 25px 15px;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
             background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 10px 40px rgba(0, 80, 150, 0.12);
+            border-radius: 20px;
+            box-shadow: 0 12px 45px rgba(13, 71, 161, 0.13);
             overflow: hidden;
         }
 
+        /* Шапка */
         header {
-            background: linear-gradient(90deg, #1a73e8, #0d47a1);
+            background: linear-gradient(90deg, #1565c0, #0d47a1);
             color: white;
-            padding: 28px 40px;
+            padding: 32px 40px;
             text-align: center;
             position: relative;
         }
 
         header h1 {
-            font-size: 2.4rem;
+            font-size: 2.5rem;
             font-weight: 700;
             letter-spacing: 1px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: #ff9800;
-            border-radius: 2px;
+        header p {
+            margin-top: 8px;
+            opacity: 0.9;
+            font-size: 1.1rem;
         }
 
         .content {
             padding: 40px 45px 50px;
         }
 
+        /* Введение */
         .intro {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             gap: 30px;
             margin-bottom: 40px;
-            background: #f8fbff;
-            border-radius: 12px;
-            padding: 25px;
-            border-left: 5px solid #1a73e8;
+            background: #f0f7ff;
+            border-radius: 16px;
+            padding: 28px;
+            border: 2px solid #bbdefb;
         }
 
         .intro-text {
             flex: 1;
         }
 
-        .intro-text p {
-            font-size: 1.15rem;
-            color: #333;
+        .intro-text h2 {
+            color: #0d47a1;
+            font-size: 1.5rem;
             margin-bottom: 12px;
+            border: none;
+            padding: 0;
         }
 
-        .intro-text .formats {
+        .intro-text p {
+            font-size: 1.12rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .formats {
             display: flex;
-            gap: 18px;
-            margin-top: 15px;
+            gap: 12px;
+            margin-top: 16px;
             flex-wrap: wrap;
         }
 
         .format-badge {
             background: #e3f2fd;
             color: #0d47a1;
-            padding: 6px 14px;
-            border-radius: 20px;
+            padding: 7px 16px;
+            border-radius: 25px;
             font-weight: 600;
             font-size: 0.95rem;
             border: 1px solid #90caf9;
         }
 
-        .computer-icon {
+        .big-illustration {
             flex-shrink: 0;
-            width: 140px;
-            height: 140px;
-            background: linear-gradient(145deg, #bbdefb, #e3f2fd);
-            border-radius: 20px;
+            width: 180px;
+            height: 160px;
+            background: white;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 6px 20px rgba(26, 115, 232, 0.15);
+            box-shadow: 0 6px 20px rgba(21, 101, 192, 0.15);
             border: 2px solid #90caf9;
+            overflow: hidden;
         }
 
-        .computer-icon svg {
-            width: 90px;
-            height: 90px;
+        .big-illustration img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        h2 {
-            font-size: 1.7rem;
+        /* Секции */
+        .section {
+            background: #fafcff;
+            border-radius: 16px;
+            padding: 28px 30px;
+            margin-bottom: 32px;
+            border: 1px solid #e3f2fd;
+        }
+
+        .section h2 {
+            font-size: 1.65rem;
             color: #0d47a1;
-            margin: 35px 0 18px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #bbdefb;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
             gap: 12px;
-        }
-
-        h2 .icon {
-            font-size: 1.5rem;
-        }
-
-        .section {
-            background: #fafcff;
-            border-radius: 12px;
-            padding: 25px 28px;
-            margin-bottom: 30px;
-            border: 1px solid #e3f2fd;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .section:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(26, 115, 232, 0.1);
+            border-bottom: 2px solid #bbdefb;
+            padding-bottom: 10px;
         }
 
         .section p {
             font-size: 1.08rem;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
             color: #333;
         }
 
+        /* Иллюстрации внутри секций */
+        .illustration-row {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .illustration-card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+            width: 220px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            transition: transform 0.2s;
+        }
+
+        .illustration-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .illustration-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .illustration-card .caption {
+            padding: 12px;
+            font-weight: 600;
+            color: #333;
+            background: #f8f9fa;
+            font-size: 0.95rem;
+        }
+
+        /* Медиа-плееры */
         .media-box {
             background: #fff;
             border: 2px dashed #90caf9;
-            border-radius: 10px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 22px;
             text-align: center;
-            margin: 15px 0;
+            margin: 18px 0;
         }
 
         audio, video {
             max-width: 100%;
-            border-radius: 8px;
+            border-radius: 10px;
             outline: none;
         }
 
@@ -173,12 +209,12 @@
 
         .note {
             font-size: 0.95rem;
-            color: #555;
+            color: #444;
             background: #fff8e1;
-            padding: 12px 16px;
-            border-radius: 8px;
-            border-left: 4px solid #ff9800;
-            margin-top: 15px;
+            padding: 14px 18px;
+            border-radius: 10px;
+            border-left: 5px solid #ff9800;
+            margin-top: 16px;
         }
 
         .code-hint {
@@ -190,66 +226,64 @@
             font-size: 0.95rem;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #f5f9ff;
-            color: #666;
-            font-size: 0.9rem;
-            border-top: 1px solid #e3f2fd;
-        }
-
-        /* Рисунки section */
+        /* Галерея рисунков */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            gap: 22px;
             margin-top: 20px;
         }
 
         .gallery-item {
             background: white;
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 18px rgba(0,0,0,0.09);
             text-align: center;
             transition: transform 0.25s;
         }
 
         .gallery-item:hover {
-            transform: scale(1.03);
+            transform: scale(1.04);
         }
 
-        .gallery-item .img-placeholder {
-            height: 140px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
         }
 
-        .gallery-item.audio-bg { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
-        .gallery-item.video-bg { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
-        .gallery-item.image-bg { background: linear-gradient(135deg, #fff3e0, #ffe0b2); }
-
-        .gallery-item p {
-            padding: 12px;
+        .gallery-item .label {
+            padding: 14px;
             font-weight: 600;
-            color: #333;
-            margin: 0;
+            color: #222;
+            font-size: 1.05rem;
         }
 
-        @media (max-width: 650px) {
+        footer {
+            text-align: center;
+            padding: 22px;
+            background: #e8f0fe;
+            color: #555;
+            font-size: 0.95rem;
+            border-top: 1px solid #bbdefb;
+        }
+
+        @media (max-width: 700px) {
             .intro {
                 flex-direction: column;
-                align-items: center;
                 text-align: center;
             }
             .content {
-                padding: 25px 20px 35px;
+                padding: 28px 18px 40px;
             }
             header h1 {
-                font-size: 1.9rem;
+                font-size: 2rem;
+            }
+            .big-illustration {
+                width: 160px;
+                height: 140px;
             }
         }
     </style>
@@ -258,95 +292,142 @@
     <div class="container">
         <header>
             <h1>Мультимедиа</h1>
+            <p>Практическая работа по информатике</p>
         </header>
 
         <div class="content">
-            <!-- Введение -->
+
+            <!-- Введение с большой иллюстрацией -->
             <div class="intro">
                 <div class="intro-text">
-                    <p><strong>Мультимедиа</strong> — это совокупность форм представления информации: текст, графика, анимация, звук и видео.</p>
-                    <p>Основные форматы:</p>
+                    <h2>Что такое мультимедиа?</h2>
+                    <p><strong>Мультимедиа</strong> — это сочетание разных видов информации: текст, картинки, звук, видео и анимация.</p>
+                    <p>На компьютере и в интернете мы постоянно встречаем мультимедиа: песни, фильмы, игры, презентации.</p>
                     <div class="formats">
                         <span class="format-badge">GIF</span>
                         <span class="format-badge">JPEG</span>
                         <span class="format-badge">PNG</span>
+                        <span class="format-badge">MP3</span>
+                        <span class="format-badge">MP4</span>
                     </div>
                 </div>
-                <div class="computer-icon">
-                    <!-- Красивая иконка компьютера -->
-                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="8" y="10" width="48" height="32" rx="3" fill="#1565C0" stroke="#0D47A1" stroke-width="2"/>
-                        <rect x="12" y="14" width="40" height="24" rx="1" fill="#E3F2FD"/>
-                        <rect x="20" y="42" width="24" height="4" fill="#0D47A1"/>
-                        <rect x="16" y="46" width="32" height="3" rx="1" fill="#1565C0"/>
-                        <circle cx="32" cy="26" r="6" fill="#42A5F5"/>
-                        <path d="M26 26h12M32 20v12" stroke="#E3F2FD" stroke-width="2"/>
-                    </svg>
+                <div class="big-illustration">
+                    <!-- Красивая иллюстрация компьютера с мультимедиа -->
+                    <img src="https://cdn-icons-png.flaticon.com/512/3067/3067303.png" 
+                         alt="Компьютер и мультимедиа"
+                         onerror="this.src='https://picsum.photos/seed/computer/300/250'">
                 </div>
             </div>
 
             <!-- Аудио -->
             <div class="section">
-                <h2><span class="icon">🔊</span> Аудио</h2>
-                <p>Для воспроизведения звука без плагинов в HTML5 применяется тег <span class="code-hint">&lt;audio&gt;</span>.</p>
-                
+                <h2>🔊 Аудио (звук)</h2>
+                <p>Чтобы добавить звук на сайт, в HTML5 используют специальный тег <span class="code-hint">&lt;audio&gt;</span>.</p>
+                <p>С его помощью можно слушать музыку или голосовые сообщения прямо в браузере — без дополнительных программ.</p>
+
+                <div class="illustration-row">
+                    <div class="illustration-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/651/651717.png" alt="Наушники">
+                        <div class="caption">Наушники</div>
+                    </div>
+                    <div class="illustration-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/727/727245.png" alt="Музыка">
+                        <div class="caption">Музыка</div>
+                    </div>
+                    <div class="illustration-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2907/2907253.png" alt="Микрофон">
+                        <div class="caption">Микрофон</div>
+                    </div>
+                </div>
+
                 <div class="media-box">
                     <audio controls>
                         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
                         Ваш браузер не поддерживает элемент audio.
                     </audio>
-                    <p style="margin-top:12px; font-size:0.9rem; color:#666;">Пример аудиоплеера (можно заменить на свой файл voice.mp3)</p>
+                    <p style="margin-top:12px; font-size:0.9rem; color:#666;">← Нажми Play, чтобы послушать пример</p>
                 </div>
 
                 <div class="note">
-                    <strong>Пример кода:</strong><br>
+                    <strong>Как писать в коде:</strong><br>
                     <code>&lt;audio src="voice.mp3" controls&gt;&lt;/audio&gt;</code>
                 </div>
             </div>
 
             <!-- Видео -->
             <div class="section">
-                <h2><span class="icon">🎬</span> Видео</h2>
-                <p>Для воспроизведения видео в HTML5 используется элемент <span class="code-hint">&lt;video&gt;</span>.</p>
-                
+                <h2>🎬 Видео</h2>
+                <p>Для показа видеороликов используют тег <span class="code-hint">&lt;video&gt;</span>.</p>
+                <p>Можно вставить любой фильм, клип или учебный ролик прямо на страницу.</p>
+
+                <div class="illustration-row">
+                    <div class="illustration-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1179/1179069.png" alt="Камера">
+                        <div class="caption">Видеокамера</div>
+                    </div>
+                    <div class="illustration-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3163/3163478.png" alt="Кино">
+                        <div class="caption">Кино</div>
+                    </div>
+                    <div class="illustration-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991195.png" alt="Плеер">
+                        <div class="caption">Видеоплеер</div>
+                    </div>
+                </div>
+
                 <div class="media-box">
-                    <video width="100%" height="auto" controls poster="">
+                    <video width="100%" controls>
                         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
                         Ваш браузер не поддерживает элемент video.
                     </video>
-                    <p style="margin-top:12px; font-size:0.9rem; color:#666;">Пример видеоплеера (можно заменить на свой файл video.mp4)</p>
+                    <p style="margin-top:12px; font-size:0.9rem; color:#666;">← Нажми Play, чтобы посмотреть пример видео</p>
                 </div>
 
                 <div class="note">
-                    <strong>Пример кода:</strong><br>
+                    <strong>Как писать в коде:</strong><br>
                     <code>&lt;video src="video.mp4" width="350" controls&gt;&lt;/video&gt;</code>
                 </div>
             </div>
 
-            <!-- Рисунки / Иллюстрации -->
+            <!-- Рисунки -->
             <div class="section">
-                <h2><span class="icon">🖼️</span> Рисунки</h2>
-                <p>В мультимедиа активно используются графические изображения. Ниже — примеры иллюстраций основных видов медиа:</p>
-                
+                <h2>🖼️ Рисунки и графика</h2>
+                <p>Картинки — самая распространённая часть мультимедиа. Их добавляют с помощью тега <span class="code-hint">&lt;img&gt;</span>.</p>
+                <p>Ниже показаны примеры разных видов изображений:</p>
+
                 <div class="gallery">
                     <div class="gallery-item">
-                        <div class="img-placeholder audio-bg">🎵</div>
-                        <p>Аудио</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2936/2936886.png" alt="Фото">
+                        <div class="label">Фотография (JPEG)</div>
                     </div>
                     <div class="gallery-item">
-                        <div class="img-placeholder video-bg">🎥</div>
-                        <p>Видео</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Рисунок">
+                        <div class="label">Рисунок (PNG)</div>
                     </div>
                     <div class="gallery-item">
-                        <div class="img-placeholder image-bg">🖼️</div>
-                        <p>Графика</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Анимация">
+                        <div class="label">Анимация (GIF)</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1995/1995515.png" alt="Иконка">
+                        <div class="label">Иконка</div>
                     </div>
                 </div>
             </div>
+
+            <!-- Итог -->
+            <div class="section" style="background: #e8f5e9; border-color: #a5d6a7;">
+                <h2 style="color: #2e7d32; border-color: #a5d6a7;">✅ Что мы узнали</h2>
+                <p>• <strong>Мультимедиа</strong> — это текст + картинки + звук + видео</p>
+                <p>• Для звука используем тег <span class="code-hint">&lt;audio&gt;</span></p>
+                <p>• Для видео — тег <span class="code-hint">&lt;video&gt;</span></p>
+                <p>• Для картинок — тег <span class="code-hint">&lt;img&gt;</span></p>
+            </div>
+
         </div>
 
         <footer>
-            Практическая работа по информатике · HTML5 Мультимедиа
+            Практическая работа по информатике · HTML5 · Мультимедиа
         </footer>
     </div>
 </body>
